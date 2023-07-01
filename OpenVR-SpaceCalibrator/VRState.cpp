@@ -17,11 +17,9 @@ VRState VRState::Load()
 
 		if (deviceClass != vr::TrackedDeviceClass_TrackingReference)
 		{
-			vr::VRSystem()->GetStringTrackedDeviceProperty(id, vr::Prop_TrackingSystemName_String, buffer, vr::k_unMaxPropertyStringSize, &err);
-
 			if (err == vr::TrackedProp_Success)
 			{
-				std::string system(buffer);
+				std::string system = deviceClass == vr::TrackedDeviceClass_HMD ? "HMD" : "Peripherals";
 				auto existing = std::find(trackingSystems.begin(), trackingSystems.end(), system);
 				if (existing != trackingSystems.end())
 				{

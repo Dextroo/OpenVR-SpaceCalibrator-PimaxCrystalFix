@@ -261,7 +261,6 @@ void ScanAndApplyProfile(CalibrationContext &ctx)
 		}
 
 		vr::ETrackedPropertyError err = vr::TrackedProp_Success;
-		vr::VRSystem()->GetStringTrackedDeviceProperty(id, vr::Prop_TrackingSystemName_String, buffer, vr::k_unMaxPropertyStringSize, &err);
 
 		if (err != vr::TrackedProp_Success)
 		{
@@ -269,7 +268,7 @@ void ScanAndApplyProfile(CalibrationContext &ctx)
 			continue;
 		}
 
-		std::string trackingSystem(buffer);
+		std::string trackingSystem = deviceClass == vr::TrackedDeviceClass_HMD ? "HMD" : "Peripherals";
 
 		if (id == vr::k_unTrackedDeviceIndex_Hmd)
 		{
