@@ -1,10 +1,11 @@
 # Pimax Crystal Fix for OpenVR Space Calibrator
 
-This is my hacky workaround to getting the Pimax Crystal to work with the Index Controllers + Vive trackers. I changed the Tracking Space to report as "HMD" and "Peripherals", instead of all under "aapvr" like the Pimax usually does. This should function just like the r2 release of the Continuous Calibration fork: https://github.com/bdunderscore/OpenVR-SpaceCalibrator/releases/tag/v1.4-bd_-r2
+This is my hacky workaround to getting the Pimax Crystal to work with the Index Controllers + Vive trackers. I changed the Tracking Space to report as "HMD" and "Peripherals", instead of all under "aapvr" like Pimax usually does. This should function just like the r2 release of the Continuous Calibration fork: https://github.com/bdunderscore/OpenVR-SpaceCalibrator/releases/tag/v1.4-bd_-r2
 
 I have not figured out the installer script, so you'll have to replace the Program Files\OpenVR-SpaceCalibrator\OpenVR-SpaceCalibrator.exe with the one in this repo (under x64/Release).
 
 SHA256: FD918F70BC0A5ED4A93C8C25738D78437E336DBE775D5D16D39367C03BCDA005
+
 VirusTotal link for the modified .exe: https://www.virustotal.com/gui/file/fd918f70bc0a5ed4a93c8c25738d78437e336dbe775d5d16d39367c03bcda005
 
 # OpenVR Space Calibrator
